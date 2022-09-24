@@ -1,0 +1,256 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.flex-item {
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+header {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  text-align: center;
+  font-style: italic;
+  /* background-color: lightgray; */
+  background: linear-gradient(45deg, #f00232, #216fd4, #3ef35f);
+  border-radius: 16px;
+  border: 5px solid tomato;
+}
+
+.flex-item-2 {
+  display: flex;
+  flex-direction: column;
+  order: 0;
+  /* или можно было просто каждому div задавать свой порядок. Решил вложенность сделать */
+}
+
+.flex-form {
+  order: -1;
+}
+
+body {
+  /* background: url("/fon.png"); */
+  background-color: bisque;
+  /* background: linear-gradient(90deg, #f0d9ca, #8fcaed, #f59cf8); */
+  color: white;
+}
+
+h1 {
+  display: block;
+  height: 5vh;
+  padding: 5px;
+  margin-top: 20px;
+  background: linear-gradient(45deg, #fadeb6, #ff95ff, #ffcbb3);
+  border: 4px solid aqua;
+  border-radius: 8px;
+  font-family: "Comfortaa", cursive;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #ff6f5a;
+  font-weight: bold;
+}
+
+h2 {
+  /* background-color: lightgray; */
+  text-align: left;
+  font-size: 2vw;
+  /* border-radius: 16px; */
+  /* border: 3px solid tomato; */
+  color: coral;
+}
+
+.ssilki {
+  font-style: italic;
+  /* background-color: lightgray; */
+  background: linear-gradient(45deg, #fadeb6, #ff95ff, #ffcbb3);
+  border-radius: 16px;
+  border: 5px solid tomato;
+  overflow-y: scroll;
+  height: 400px;
+}
+
+a {
+  text-decoration: none;
+  color: mediumblue;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+table {
+  text-align: center;
+  border-radius: 8px;
+  border: 5px solid tomato;
+}
+
+table tr:nth-child(odd) {
+  background-color: orchid;
+  color: darkmagenta;
+}
+
+table tr:nth-child(even) {
+  background-color: rebeccapurple;
+  color: lightpink;
+}
+
+form {
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /* background-color: lightgray; */
+  background: linear-gradient(45deg, #fadeb6, #ff95ff, #ffcbb3);
+  border-radius: 16px;
+  border: 5px solid tomato;
+}
+
+footer {
+  text-align: center;
+  font-style: italic;
+  /* background-color: lightgray; */
+  background: linear-gradient(45deg, #f00232, #216fd4, #3ef35f);
+  border-radius: 16px;
+  font-size: 20px;
+  border: 5px solid tomato;
+}
+
+#logo {
+  display: flex;
+  border-radius: 50%;
+  box-shadow: 0 0 25px white;
+}
+
+nav {
+  text-align: center;
+  font-size: 2vw;
+  text-decoration: none;
+  border-radius: 16px;
+}
+
+nav a {
+  /* background-color: lightgray; */
+  background: linear-gradient(45deg, #fadeb6, #ff95ff, #ffcbb3);
+  color: indianred;
+  border-radius: 8px;
+  border: 3px solid tomato;
+}
+
+textarea {
+  height: 90px;
+  border: 1px solid crimson;
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+  overflow: auto;
+}
+
+#skills {
+  border: 1px solid crimson;
+  border-radius: 8px;
+  outline: none;
+  overflow: auto;
+  caret-color: #fadeb6;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+#skills option {
+  padding: 2px;
+}
+
+@media screen and (min-width: 1025px) {
+  ::-webkit-scrollbar,
+  .ssilki::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .main-content {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  ::-webkit-scrollbar-track,
+  .ssilki::-webkit-scrollbar {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #f9f9fd;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #00c6fb, #005bea);
+  }
+
+  .ssilki::-webkit-scrollbar-thumb {
+    background-color: #f2bf93;
+    background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.25) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.25) 50%,
+      rgba(255, 255, 255, 0.25) 75%,
+      transparent 75%,
+      transparent
+    );
+  }
+
+  .flex-item-2,
+  .flex-form {
+    order: 0;
+  }
+
+  /* h1 {
+  background-image: linear-gradient(to right, crimson, bisque);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+} */
+  header {
+    display: block;
+    position: relative;
+    padding-top: 10px;
+  }
+
+  h1 {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+
+  #logo {
+    float: left;
+    position: absolute;
+    left: 18%;
+    width: 80px;
+    height: 80px;
+  }
+
+  .ssilki {
+    height: 400px;
+  }
+
+  footer {
+    height: 50px;
+    padding-top: 25px;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
